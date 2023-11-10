@@ -352,7 +352,7 @@ function getData(experiment, generatorIdx, difficultIdx, number_of_classes, numb
 
   //HT_ADWIN_no_drift_hyp_f_2_c_10_1: 1
   // HT_ADWIN_intra_class_drift_emerging_branch_rt_ds_1_f_2_c_2_1: 1
-  html_prefix = "https://www.cmsc508.com/~aguiargj/"
+  http_prefix = "https://www.cmsc508.com/~aguiargj/"
   return [http_prefix+"output/" + csv_file, http_prefix+"/datasets/" + data_file];
 }
 
