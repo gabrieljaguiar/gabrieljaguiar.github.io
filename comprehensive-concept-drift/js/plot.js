@@ -455,6 +455,7 @@ function readCSV(csv_file) {
     return d;
   }).catch(function(error){
     console.log(error);
+    $("#loader").hide();
     $("#error_msg").show();
   });
 }
