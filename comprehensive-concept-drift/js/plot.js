@@ -254,6 +254,7 @@ function changeGenerator() {
   let expId = document.getElementById("experimentBox").value;
   let genId = document.getElementById("generatorBox").value;
   $("#numberClassForm").hide();
+  $("#error_msg").hide();
   $("#featuresForm").hide();
   $("#driftSpeedForm").hide();
   $("#driftDetectorForm").hide();
@@ -280,6 +281,7 @@ function changeExperiment() {
   //$("#generatorForm").hide();
   $("#numberClassForm").hide();
   $("#featuresForm").hide();
+  $("#error_msg").hide();
   $("#difficultyForm").hide();
   $("#driftSpeedForm").hide();
   //$("#imbalanceForm").hide();
@@ -451,6 +453,9 @@ function readCSV(csv_file) {
     d.iteration = parseInt(d["idx"]);
     //d.gmean_min = parseFloat(d["class_" + (n_classes - 1)])
     return d;
+  }).catch(function(error){
+    console.log(error);
+    $("#error_msg").show();
   });
 }
 
