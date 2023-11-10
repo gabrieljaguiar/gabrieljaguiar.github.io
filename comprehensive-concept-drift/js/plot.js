@@ -446,9 +446,7 @@ function changeMetric(trigger = true) {
 
 function readCSV(csv_file) {
   //console.log(metric);
-  return d3.csv(csv_file)
-  .header("mode", "no-cors")
-  .get(function (d) {
+  return d3.csv(csv_file, function (d) {
     //let n_classes = parseInt(document.getElementById("numberClassBox").value);
     d.iteration = parseInt(d["idx"]);
     //d.gmean_min = parseFloat(d["class_" + (n_classes - 1)])
