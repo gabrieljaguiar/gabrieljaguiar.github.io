@@ -362,6 +362,8 @@ function getData(experiment, generatorIdx, difficultIdx, number_of_classes, numb
 function updateChart() {
   $(".graph").hide();
   //$("#resultsTable").hide();
+  $("#legendBox").hide();
+  $("#featureSpaceBox").hide();
   $(".links").hide();
   $("#error_msg").hide();
   $("#loader").show();
